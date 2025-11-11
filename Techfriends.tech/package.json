@@ -6,7 +6,10 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "build:azure": "vite build --outDir dist",
+    "serve:azure": "npm run build:azure && vite preview --port 4173",
+    "check:size": "npm run build:azure && echo 'Build completed. Check dist folder for deployment artifacts.'"
   },
   "dependencies": {
     "@radix-ui/react-alert-dialog": "^1.0.5",
